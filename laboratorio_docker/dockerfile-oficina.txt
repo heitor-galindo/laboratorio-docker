@@ -1,0 +1,33 @@
+Dockerfile Básico
+ARG
+Variavel que pode ser passada ma hora do build.
+Única variavel que pode ser passada antes do 'FROM'.
+Não fica salva na imagem.
+https://docs.docker.com/engine/reference/builder/#arg
+
+ENV
+Fica salvo na imagem.
+
+EXPOSE (atribui portas efemeras quando usamos a flag -P no docker run)
+
+RUN (forma basica)
+CMD e ENTRYPOINT
+ADD (como usar e por que evitar. - git/download/extracao)
+COPY (uso com chown e chmod) (uso do --link)
+VOLUME
+USER
+WORKDIR
+
+Dockerfile Avançado
+Como mudar a forma como o Dockerfile interpreta a quebra de linha?
+The escape directive sets the character used to escape characters in a Dockerfile. If not specified, the default escape character is \.
+Mais usando em Windows: # escape=`
+https://docs.docker.com/engine/reference/builder/#parser-directives
+
+Como usar a substituição de variaveis dentro do Dockerfile?
+$variable_name, ${variable_name}, ${foo}_bar
+${variable:-word} indicates that if variable is set then the result will be that value. If variable is not set then word will be the result.
+${variable:+word} indicates that if variable is set then word will be the result, otherwise the result is the empty string.
+https://docs.docker.com/engine/reference/builder/#environment-replacement
+
+LABEL (menos importante, pode ser util)

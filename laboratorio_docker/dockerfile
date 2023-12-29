@@ -1,0 +1,10 @@
+# ARG python_version=3.9-slim
+# ARG python_version
+# FROM python:${python_version:-3.11-slim}
+
+# EXPOSE 8080
+# ENTRYPOINT [ "python3" ]
+# CMD [ "--version" ]
+
+FROM nginx
+EXPOSE 8081

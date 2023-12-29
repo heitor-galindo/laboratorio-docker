@@ -1,0 +1,6 @@
+
+docker pull ubuntu      - baixa imagem do ubuntu
+docker image ls         - visualizar imagens
+docker run -it ubuntu   - executa um container com psudo-tty e stdin
+docker ps               - lista containers
+docker rm               - remove containers

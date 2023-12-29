@@ -1,0 +1,56 @@
+# Oficina Docker / Docker Compose
+## Topicos
+
+
+
+### basico Docker
+ - limpeza
+    - docker system prune
+    - docker rm 
+    - docker rmi
+    - docker volume rm
+ - backup
+   - salvar container como imagem (filesystem + envs/configs)
+   - salvar imagem como arquivo tar
+   - salvar volume como arquivo tar
+   - carregar imagem a partir de um tar
+   - executar container a partir da imagem carregada
+ - login no registry da SuperSim
+    - baixar imagens direto do nexus
+    - enviar imagens para o nexus
+ - comandos basicos (20% dos comandos resolvem 80% dos problemas)
+    - docker build
+    - docker run 
+    - docker exec 
+    - docker logs 
+    - docker inspect
+    - ferramenta: dive
+  - comandos uteis
+    - docker cp
+    - docker diff
+    - docker update
+    - docker attach
+    - docker rename
+    - docker tag
+
+### yaml sintax
+
+### Compose file
+ - build
+  - como fazer build
+  - contextos do build + contextos adicionais
+  - dockerfile_inline
+  - nome da imagem / tag
+ - nome do container 
+ - volumes
+  - volume externo
+  - nome de volume
+ - envs / env_file
+  - como interpolar variaveis
+ - deploy
+  - controle de recursos
+  - depends_on
+  - como usar profiles
+ - portas
+ HOST:CONTAINER should always be specified as a (quoted) string, to avoid conflicts with yaml base-60 float
+ [HOST:]CONTAINER[/PROTOCOL]
